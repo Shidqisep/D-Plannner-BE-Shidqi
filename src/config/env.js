@@ -2,7 +2,9 @@
 
 require('dotenv').config();
 
-const required = ['PORT', 'DATABASE_URL', 'JWT_SECRET', 'JWT_REFRESH_SECRET', 'GEMINI_API_KEY'];
+const required = [
+  // 'PORT', 
+  'DATABASE_URL', 'JWT_SECRET', 'JWT_REFRESH_SECRET', 'GEMINI_API_KEY'];
 
 for (const key of required) {
   if (!process.env[key]) {
@@ -11,7 +13,7 @@ for (const key of required) {
 }
 
 module.exports = {
-  PORT: process.env.PORT || 3000,
+  // PORT: process.env.PORT || 3000,
   DATABASE_URL: process.env.DATABASE_URL,
   JWT_SECRET: process.env.JWT_SECRET,
   JWT_REFRESH_SECRET: process.env.JWT_REFRESH_SECRET,
